@@ -1,0 +1,53 @@
+Git et Github
+
+
+I) Qu’est-ce que versionner son code ?
+
+Git est un logiciel qui permet de versionner votre code, c'est-à-dire gérer les versions de votre code au fur et à mesure que vous le modifiez.
+
+Un commit correspond à une version de votre projet à un instant t. (c’est une modification accompagné d’un message).
+
+
+II) Comparez Git aux autres solutions de versioning
+
+Il existe plusieurs type de logiciel de gestion de version.
+Modèle centralisé : un serveur central contrôle toute la base de code du logiciel.Ex: SVN, ou CVS
+Modèle distribué : toutes les machines ont accès à la base de code, pas besoin de passer par un serveur central. Ex: Git, Mercurial, Bazaar.
+
+Avantages du modèle distribué:
+
+ne nécessite pas internet 
+
+moins de risque de perdre son code (car accessible par toutes les machines)
+
+Git possède une grande communauté
+
+
+III) Installer Git
+
+Sur windows :http://msysgit.github.io 
+Sous linux, tapper la commande suivante dans le terminal : sudo apt install git
+Exécutez la commande suivante pour définir votre nom et l’email que vous utiliserez ensuite pour créer un compte gratuit sur Github:
+git config --global user.name ""
+git config --global user.email ""
+
+Pour vérifier l’installation tapper « git » dans le terminal, les commandes d’utilisation devraient s’afficher
+
+
+IV) Faites votre premier commit
+
+Créer d’abord un repository git (c'est-à-dire un répertoire de travail qui pourra être géré par Git !)
+Pour activer un dossier comme repository Git, il suffit de se placer dans ce dossier avec le Terminal puis d'utiliser la commande git init. 
+On peut ensuite commencer à créer notre projet à l’intérieur de notre repository git (des fichiers)
+Il faut ensuite que les fichiers crées soient trackés (suivis, gardé en mémoire) par git (on dit aussi qu’ils sont ajoutés à l’index)
+Pour cela on utilise la commande git add NomDuFichier (par exemple git add fichier.txt)
+On fait enfin un commit avec un message pour dire que l’on vient d’ajouté le fichier fichier.txt : git commit -m « le fichier fichier.txt vient d’être ajouté »
+
+Pour résumer :
+1) Créer un repository git : se placer à l’aide du terminal sur le dossier concerné et tapper git init
+2) Créer ses fichiers, à l’intérieur du repository
+3) Indexer ses fichiers à Git : git add NomDuFichier
+4) Faire son 1er commit (version) avec un message descriptif de ce que l’on vient de faire : git commit -m « Mon Commentaire »
+
+
+
