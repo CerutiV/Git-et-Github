@@ -50,4 +50,63 @@ Pour résumer :
 4) Faire son 1er commit (version) avec un message descriptif de ce que l’on vient de faire : git commit -m « Mon Commentaire »
 
 
+V) Lire l’historique
+
+git log : affiche la liste de tous les commits que vous avez réalisés (du + au récent au + vieux) on retrouve le SHA, la date, l’auteur et le message de description du commit.
+Astuce : si vous modifier un fichier qui est déjà ajouté à l’index, vous n’êtes pas obligé de retaper la commande git add. On peut fusionner la commande git add et git commit par git commit -a -m « Mon commentaire » ou git commit -am « Mon commentaire »
+
+VI) Positionnez-vous sur un commit donné
+
+Pour se positionner sur un commit donné : git checkout SHADuCommit ex : git checkout 86cb783221c7841187
+
+Pour revenir à votre branche principale (au commit le plus récent)
+git checkout master
+
+Pour modifier le message du commit le plus récent : git commit --amend -m « Votre message »
+
+Pour " revert" un commit, c'est-à-dire créer un nouveau commit qui fait l'inverse du précédent :
+git revert SHADuCommit Par Exemple si vous avez fait un commit pour créer un fichier, faire un revert supprimera le fichier. Si vous avez fait un commit où vous aviez crée 3 ligne de code, les 3 lignes seront supprimées…
+
+Pour annuler tous les changements qui n’ont pas encore été commités : git reset --hard
+
+VII) Les remotes
+
+Un remote est une autre machine qui peut être:
+interne (si vous avez la chance d'avoir plusieurs ordinateurs )
+externe (grâce à des services comme GitHub ou BitBucket)
+
+Une fois que vous avez travaillé sur votre code et effectué vos commits, vous allez donc les envoyer sur un remote. Cela permet d’avoir une sauvegarde de vos commits en cas de problème (disque dur en panne, vol d’ordinateur…)
+
+VIII) GitHub
+
+GitHub est un service en ligne qui permet d'héberger ses repositories de code
+Vous allez pouvoir notamment : 
+Communiquer avec d'autres développeurs et signaler des problèmes de code en déclarant des "issues" ;
+Partager des morceaux de code en ligne à l'aide de "gists" 
+Proposer des modifications de code à d'autres repos en faisant des "pull requests" ;
+récupérer du code depuis un autre repository
+
+IX) Récupérez du code d'un autre repository sur Github
+
+À partir de GitHub, vous pouvez copier un repository sur votre machine. Pour cela, il vous suffit de rechercher le repository qui vous intéresse sur GitHub, de vous y placer, puis d'utiliser l'option "clone or download" en bas à droite de l'écran.
+
+On utilise ensuite dans notre terminal la commande :git clone lienFourniParGitHub 
+
+Ici dans notre exemple : git clone https://github.com/facebook/react.git
+
+L’intégralité du repository est copié en local dans le dossier sélectionné
+
+Remarque : on peut utiliser l’option HTTPS ou SHS pour cloner son repository.
+
+HTTPS est plus simple mais demande de fournir vos identifiants GitHub à chaque fois que vous faites un git clone. 
+L'option SSH est plus pratique car elle ne vous demande pas vos identifiants à chaque fois. Par contre, pour l'utiliser, il faut générer une clé SSH, ce qui est un peu plus compliqué
+
+
+
+
+
+
+
+
+
 
