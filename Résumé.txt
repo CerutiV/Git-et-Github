@@ -101,6 +101,31 @@ Remarque : on peut utiliser l’option HTTPS ou SHS pour cloner son repository.
 HTTPS est plus simple mais demande de fournir vos identifiants GitHub à chaque fois que vous faites un git clone. 
 L'option SSH est plus pratique car elle ne vous demande pas vos identifiants à chaque fois. Par contre, pour l'utiliser, il faut générer une clé SSH, ce qui est un peu plus compliqué
 
+X) Créez votre premier repository Github
+
+En cliquant sur + en haut à droite et « New repository »
+GitHub vous demandera alors de préciser quelques détails sur votre repository: son nom, sa description, son statut public ou privé… 
+
+"Initialise with a README", est à cocher uniquement dans le cas où vous n'avez pas encore créé le repository en question sur votre machine en local
+
+Vous n’avez plus qu’à utiliser la commande git clone pour copier ce repository en local sur votre machine
+
+XI) Envoyer son code local sur Github
+
+Il faut déjà avoir crée un repository Github et l’avoir cloné en local 
+
+git push origin master
+
+XII) Récupérer en local les modifications du repo Github
+
+Il faut déjà avoir crée un repository Github et l’avoir cloné en local
+git pull origin master
+
+On aurait pu faire un git clone mais cela récupère l’intégralité du projet, la manipulation est donc plus lente
+
+Ces 2 commandes (git pull et push) permettent d’être le plus à jour possible dans un projet. Elles sont donc à faire régulièrement
+
+
 
 
 
